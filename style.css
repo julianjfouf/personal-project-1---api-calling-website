@@ -39,6 +39,9 @@ a {
 NAV
 
 */
+nav {
+  padding: 0 16px;
+}
 
 .nav__row {
   height: 100px;

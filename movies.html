@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="movie.css" />
   </head>
   <body>
     <nav>
@@ -21,7 +22,7 @@
         <ul class="nav__list">
           <li class="nav__links">
             <a
-              href="movies.html"
+              href="#"
               class="nav__link link__hover-effect link__hover-effect--black cursor__pointer"
               >All Movies</a
             >
@@ -50,35 +51,10 @@
         </ul>
       </div>
     </nav>
-    <section id="landingpage">
-      <div class="container">
-        <div class="row landingpage__row">
-          <p class="section__description landingpage__description--animation">
-            Search for a <span class="teal landingpage__animation">Movie</span>
-          </p>
-          <form
-            action=""
-            class="landingpage__search--wrapper landingpage__search--animation"
-          >
-            <input
-              type="text"
-              class="landingpage__search"
-              placeholder="Search"
-            />
-            <button>
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section id="movies-now">
+    <section id="movies">
       <div class="container">
         <div class="row">
-          <p class="section__description movies-now--title">
-            In Theaters <span class="teal">Now</span>
-          </p>
+          <h2 class="section__title">All <span class="teal">Movies</span></h2>
           <ul class="movie__list">
             <li class="movie__links">
               <img
@@ -156,54 +132,5 @@
         </div>
       </div>
     </section>
-    <footer>
-      <div class="container">
-        <div class="row footer__row">
-          <div class="logo--wrapper footer__logo--wrapper">
-            <a href="#" class="footer__logo--fixer"
-              ><i class="fas fa-film footer__logo-icon"></i>
-              <h1 class="nav__logo footer__logo">
-                <span class="teal">Movie</span>Player
-              </h1></a
-            >
-            <p class="footer__top">
-              Top
-              <i class="fas fa-arrow-up"></i>
-            </p>
-          </div>
-          <ul class="footer__list">
-            <li class="footer__links">
-              <a
-                class="footer__link link__hover-effect link__hover-effect--white"
-                href="#"
-                >All Movies</a
-              >
-            </li>
-            <li class="footer__links">
-              <a
-                class="footer__link link__hover-effect link__hover-effect--white"
-                href="#"
-                >Coming Soon</a
-              >
-            </li>
-            <li class="footer__links">
-              <a
-                class="footer__link link__hover-effect link__hover-effect--white"
-                href="#"
-                >Nearby Locations</a
-              >
-            </li>
-            <li class="footer__links">
-              <a
-                class="footer__link link__hover-effect link__hover-effect--white"
-                href="#"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-          <p class="copyright">&copy; 2022 MoviePlayer Inc.</p>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

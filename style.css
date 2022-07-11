@@ -95,8 +95,6 @@ nav {
   padding-left: 18px;
 }
 
-
-
 .link__hover-effect {
   position: relative;
 }
@@ -221,10 +219,10 @@ button:hover .fa-arrow-right {
 }
 
 .movie__rating {
-    text-align: center;
-    transition: all 300ms ease;
+  padding-top: 8px;
+  text-align: center;
+  transition: all 300ms ease;
 }
-
 
 /* FOOTER */
 
@@ -245,7 +243,7 @@ footer {
 
 .footer__logo {
   color: white;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .footer__list {
@@ -291,7 +289,7 @@ footer {
 }
 
 .landingpage__animation {
-  animation: slide-up 4000ms backwards;
+  animation: slide-up 2000ms 800ms backwards;
 }
 
 @keyframes slide-up {
@@ -304,7 +302,7 @@ footer {
 }
 
 .landingpage__search--animation {
-  animation: slide-in 800ms 200ms ease;
+  animation: slide 1000ms ease;
 }
 
 @keyframes slide-in {
@@ -319,7 +317,7 @@ footer {
 }
 
 .landingpage__description--animation {
-  animation: slide 1000ms 200ms ease;
+  animation: slide 1000ms ease;
 }
 
 @keyframes slide {
@@ -341,4 +339,9 @@ footer {
 .movie__links:hover .movie__rating {
   transform: translateY(18px);
   color: #008080;
+}
+
+.movies__row {
+  display: flex;
+  flex-direction: column;
 }

@@ -16,14 +16,18 @@
     <nav>
       <div class="row nav__row">
         <div class="logo--wrapper">
-          <a href="index.html"><h1 class="nav__logo"><span class="teal"><i class="fas fa-film"></i>Movie</span>Player</h1></a>
+          <a href="index.html"
+            ><h1 class="nav__logo">
+              <span class="teal"><i class="fas fa-film"></i>Movie</span>Player
+            </h1></a
+          >
         </div>
         <ul class="nav__list">
           <li class="nav__links">
             <a
               href="movies.html"
               class="nav__link link__hover-effect link__hover-effect--black cursor__pointer"
-              >All Movies</a
+              >In Theaters</a
             >
           </li>
           <li class="nav__links">
@@ -57,11 +61,14 @@
             Search for a <span class="teal landingpage__animation">Movie</span>
           </p>
           <form
-            action=""
+            onsubmit="saveId(id)"
+            onchange="onSearchChange(event)"
+            action="/search.html"
+            method="get"
             class="landingpage__search--wrapper landingpage__search--animation"
           >
             <input
-              type="text"
+              type="search"
               class="landingpage__search"
               placeholder="Search"
             />
@@ -72,7 +79,6 @@
         </div>
       </div>
     </section>
-
     <section id="movies-now">
       <div class="container">
         <div class="row">

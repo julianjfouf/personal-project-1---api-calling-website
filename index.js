@@ -1,25 +1,30 @@
-const movieListEl = document.querySelector(".movie__list");
+function onSearchChange(event) {
+  console.log(event.target.value);
+}
 
-async function main() {
-    const movies = await fetch ("http://www.omdbapi.com/?i=tt3896198&apikey=86637aa7");
+const id = localStorage.getItem(event);
+
+async function getId() {
+    const movieListEl = document.querySelector('.movie__list');
+    const movies = await fetch(`https://omdbapi.com/?i=tt3896198&apikey=86637aa7&s=guardians`);
     const moviesData = await movies.json();
-    movieListEl.innerHTML = moviesData.map((movie) => movieHTML(movie)).join("");
+
+    movieListEl.innerHTML = moviesData.Search.map((movie) =>
+        `<li class="movie__links">
+        <img
+          class="movie__img"
+          src="${movie.Poster}"
+          alt=""
+        />
+        <h4 class="movie__title">${movie.Title}</h4>
+        <p class="movie__rating">${movie.Year}</p>
+      </li>`).join('');
 }
 
-main();
-
-function showMovieInfo(id) {
-    localStorage.setItem("id", id);
+function saveId(input) {
+  localStorage.setItem('id', input);
+  document.querySelector(' .searchId').innerHTML = `${input}`
+  console.log(input);
 }
 
-function movieHTML(movie) {
-    return `<li class="movie__links">
-    <img
-      class="movie__img"
-      src="${movie.poster}"
-      alt=""
-    />
-    <h4 class="movie__title">${movie.title}</h4>
-    <p class="movie__rating">${movie.imdbRating}</p>
-  </li>`
-}
+getId();

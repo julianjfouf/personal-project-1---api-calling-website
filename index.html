@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
@@ -62,13 +62,13 @@
           </p>
           <form
             onsubmit="saveId(id)"
-            onchange="onSearchChange(event)"
             action="/search.html"
             method="get"
             class="landingpage__search--wrapper landingpage__search--animation"
           >
             <input
               type="search"
+              onchange="onSearchChange(event)"
               class="landingpage__search"
               placeholder="Search"
             />

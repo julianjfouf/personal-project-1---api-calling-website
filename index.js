@@ -1,16 +1,14 @@
-function onSearchChange(event) {
-  console.log(event.target.value);
-}
+const movieListEl = document.querySelector(".movie__list");
 
-const id = localStorage.getItem(event);
-
-async function getId() {
-    const movieListEl = document.querySelector('.movie__list');
+async function main() {
     const movies = await fetch(`https://omdbapi.com/?i=tt3896198&apikey=86637aa7&s=guardians`);
     const moviesData = await movies.json();
 
-    movieListEl.innerHTML = moviesData.Search.map((movie) =>
-        `<li class="movie__links">
+    movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join('');
+}
+
+function movieHTML(movie) {
+  return `<li class="movie__links">
         <img
           class="movie__img"
           src="${movie.Poster}"
@@ -18,15 +16,14 @@ async function getId() {
         />
         <h4 class="movie__title">${movie.Title}</h4>
         <p class="movie__rating">${movie.Year}</p>
-      </li>`).join('');
+      </li>`
 }
 
+main();
 
 
-function saveId(input) {
-  localStorage.setItem('id', input);
-  document.querySelector(' .searchId').innerHTML = `${input}`
-  console.log(input);
+
+function saveId(id) {
+  localStorage.setItem("id", id);
+  window.location.href = `${window.location.origin}/search.html`
 }
-
-getId();

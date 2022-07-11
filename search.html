@@ -57,13 +57,13 @@
         <div class="row movies__row">
           <div class="form--wrapper"><form
             onsubmit="saveId(id)"
-            onchange="onSearchChange(event)"
             action="/search.html"
             method="get"
             class="landingpage__search--wrapper landingpage__search--animation"
           >
             <input
               type="search"
+              onchange="onSearchChange(event)"
               class="landingpage__search"
               placeholder="Search"
             />

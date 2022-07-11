@@ -21,6 +21,8 @@ async function getId() {
       </li>`).join('');
 }
 
+
+
 function saveId(input) {
   localStorage.setItem('id', input);
   document.querySelector(' .searchId').innerHTML = `${input}`

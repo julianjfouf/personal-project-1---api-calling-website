@@ -17,13 +17,17 @@
     <nav>
       <div class="row nav__row">
         <div class="logo--wrapper">
-          <a href="index.html"><h1 class="nav__logo"><span class="teal"><i class="fas fa-film"></i>Movie</span>Player</h1></a>
+          <a href="index.html"
+            ><h1 class="nav__logo">
+              <span class="teal"><i class="fas fa-film"></i>Movie</span>Player
+            </h1></a
+          >
         </div>
         <ul class="nav__list">
           <li class="nav__links">
             <a
               href="movies.html"
-              class="nav__link link__hover-effect link__hover-effect--black cursor__pointer"
+              class="nav__link link__hover-effect link__hover-effect--black not-allowed"
               >In Theaters</a
             >
           </li>
@@ -54,20 +58,25 @@
     <section id="movies">
       <div class="container">
         <div class="row movies__row">
-          <div class="form--wrapper landingpage__search--wrapper landingpage__search--animation">
+          <div
+            class="form--wrapper landingpage__search--wrapper landingpage__search--animation"
+          >
             <input
-            id="searchMovie"
+              id="searchMovie"
               type="search"
-              onsubmit="getId()"
-              onchange="main()"
+              onsubmit="searchResults(), saveId()"
+              onchange="main(), saveId()"
               class="landingpage__search"
               placeholder="Search"
             />
           </div>
-          <h2 class="section__title">Search Results for: <span class="teal searchId"></span></h2>
-          <ul class="movie__list">
-
-          </ul>
+          <h2 class="section__title">
+            Search Results for: <span class="teal searchId"></span>
+          </h2>
+          <div class="spinner movies__loading">
+            <i class="fas fa-spinner movies__loading--spinner"></i>
+          </div>
+          <ul class="movie__list"></ul>
         </div>
       </div>
     </section>

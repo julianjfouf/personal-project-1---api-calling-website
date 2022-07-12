@@ -19,6 +19,10 @@ body {
   padding: 100px 0;
 }
 
+.not-allowed {
+  cursor: not-allowed;
+}
+
 .row {
   max-width: 1280px;
   width: 100%;

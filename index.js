@@ -5,5 +5,3 @@ function saveId() {
   window.location.href = `${window.location.origin}/search.html`
   console.log('worked')
 }
-
-main();

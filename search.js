@@ -1,12 +1,13 @@
 const movieListEl = document.querySelector(".movie__list")
-const searchInput = document.getElementById("searchMovie").value
+const searchInput = document.getElementById("searchMovie")
+
 async function main() {
-  const id = localStorage.getItem("id");
+  localStorage.getItem(searchInput.value);
+  console.log(searchInput.value)
   const movie = await fetch(
-    `https://omdbapi.com/?i=tt3896198&apikey=86637aa7&s=${searchInput}`
+    `https://omdbapi.com/?i=tt3896198&apikey=86637aa7&s=${searchInput.value}`
   );
   const movieData = await movie.json();
-
   movieListEl.innerHTML =
   `<li class="movie__links">
         <img
@@ -20,9 +21,6 @@ async function main() {
 }
 
 function saveId() {
-  localStorage.getItem(searchInput);
-  console.log(searchInput);
+  localStorage.getItem(searchInput.value);
+  console.log(searchInput.value);
 }
-
-main();
-

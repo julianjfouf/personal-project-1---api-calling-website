@@ -1,9 +1,9 @@
-const searchInput = document.getElementById("searchMovie").value
-main();
+var searchInput = document.getElementById("searchMovie")
 
 function saveId() {
-  localStorage.setItem("id", searchInput);
+  localStorage.setItem("id", searchInput.value);
   window.location.href = `${window.location.origin}/search.html`
   console.log('worked')
 }
 
+main();

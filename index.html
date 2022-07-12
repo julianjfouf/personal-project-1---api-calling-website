@@ -61,14 +61,15 @@
             Search for a <span class="teal landingpage__animation">Movie</span>
           </p>
           <form
-            onsubmit="saveId(id)"
+            onsubmit="saveId(searchInput)"
             action="/search.html"
             method="get"
             class="landingpage__search--wrapper landingpage__search--animation"
           >
             <input
+              id="searchMovie"
               type="search"
-              onchange="onSearchChange(event)"
+              onchange=""
               class="landingpage__search"
               placeholder="Search"
             />

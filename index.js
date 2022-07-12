@@ -1,5 +1,5 @@
 const movieListEl = document.querySelector(".movie__list");
-
+const searchInput = document.getElementById("searchMovie").value
 async function main() {
     const movies = await fetch(`https://omdbapi.com/?i=tt3896198&apikey=86637aa7&s=guardians`);
     const moviesData = await movies.json();
@@ -21,9 +21,8 @@ function movieHTML(movie) {
 
 main();
 
-
-
-function saveId(id) {
-  localStorage.setItem("id", id);
+function saveId(searchInput) {
+  localStorage.setItem("id", searchInput);
   window.location.href = `${window.location.origin}/search.html`
 }
+

@@ -54,22 +54,18 @@
     <section id="movies">
       <div class="container">
         <div class="row movies__row">
-          <div class="form--wrapper"><form
-            onsubmit="saveId(searchInput)"
-            method="get"
-            class="landingpage__search--wrapper landingpage__search--animation"
-          >
+          <div class="form--wrapper landingpage__search--wrapper landingpage__search--animation">
             <input
             id="searchMovie"
               type="search"
-              onchange="onSearchChange()"
+              onchange="saveId()"
               class="landingpage__search"
               placeholder="Search"
             />
           </div>
           <h2 class="section__title">Search Results for: <span class="teal searchId"></span></h2>
           <ul class="movie__list">
-            
+
           </ul>
         </div>
       </div>

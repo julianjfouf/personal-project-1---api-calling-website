@@ -6,7 +6,6 @@ async function main() {
     `https://omdbapi.com/?i=tt3896198&apikey=86637aa7&s=${searchInput}`
   );
   const movieData = await movie.json();
-  console.log(movieData);
 
   movieListEl.innerHTML =
   `<li class="movie__links">
@@ -20,8 +19,9 @@ async function main() {
       </li>`
 }
 
-function onSearchChange() {
-  console.log('23232');
+function saveId() {
+  localStorage.getItem(searchInput);
+  console.log(searchInput);
 }
 
 main();

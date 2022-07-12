@@ -349,3 +349,49 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 768px) {
+  .nav__logo {
+    font-size: 36px;
+  }
+  .fa-film {
+    font-size: 36px;
+  }
+  .movie__links {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 428px) {
+  .nav__link {
+    display: none;
+  }
+  .nav__logo {
+    text-align: center;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .section__description {
+    font-size: 36px;
+  }
+  .landingpage__search {
+    font-size: 18px;
+    padding: 5px 20px;
+  }
+  .fa-arrow-right {
+    display: none;
+  }
+  button {
+    display: none;
+  }
+  .movie__links {
+    width: calc(100% / 2);
+  }
+  .footer__link {
+    font-size: 14px;
+  }
+  html {
+    overflow-x: hidden;
+  }
+}
